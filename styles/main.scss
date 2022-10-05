@@ -11,11 +11,17 @@
 
 body {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: $darkGrey;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     .box {
         position: relative;
@@ -34,7 +40,7 @@ body {
             animation-delay: -3s;
         }
 
-        .form {
+        form {
             position: absolute;
             top: 2px;
             right: 2px;

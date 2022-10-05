@@ -15,17 +15,17 @@
   }
 }
 @media (max-width: 600px) {
-  .box {
+  main .box {
     width: 300px !important;
     height: 400px !important;
   }
-  .box .form {
+  main .box form {
     padding: 40px 30px !important;
   }
-  .box .form .input-box {
+  main .box form .input-box {
     min-width: auto !important;
   }
-  span {
+  main span {
     max-width: 260px;
     text-align: center;
   }
@@ -45,13 +45,19 @@
 
 body {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background-color: #23242a;
 }
-body .box {
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .box {
   position: relative;
   width: 380px;
   height: 420px;
@@ -59,7 +65,7 @@ body .box {
   border-radius: 8px;
   overflow: hidden;
 }
-body .box::before {
+main .box::before {
   content: "";
   position: absolute;
   top: -50%;
@@ -71,7 +77,7 @@ body .box::before {
   -webkit-animation: animate 6s linear infinite;
           animation: animate 6s linear infinite;
 }
-body .box::after {
+main .box::after {
   content: "";
   position: absolute;
   top: -50%;
@@ -85,7 +91,7 @@ body .box::after {
   -webkit-animation-delay: -3s;
           animation-delay: -3s;
 }
-body .box .form {
+main .box form {
   position: absolute;
   top: 2px;
   right: 2px;
@@ -98,18 +104,18 @@ body .box .form {
   display: flex;
   flex-direction: column;
 }
-body .box .form h2 {
+main .box form h2 {
   color: #45f3ff;
   font-weight: 500;
   text-align: center;
   letter-spacing: 0.1em;
 }
-body .box .form .input-box {
+main .box form .input-box {
   position: relative;
   min-width: 300px;
   margin-top: 35px;
 }
-body .box .form .input-box input {
+main .box form .input-box input {
   position: relative;
   width: 100%;
   padding: 20px 10px 10px;
@@ -121,15 +127,15 @@ body .box .form .input-box input {
   letter-spacing: 0.05em;
   z-index: 10;
 }
-body .box .form .input-box input:valid ~ span, body .box .form .input-box input:focus ~ span {
+main .box form .input-box input:valid ~ span, main .box form .input-box input:focus ~ span {
   color: #45f3ff;
   transform: translateY(-34px);
   font-size: 0.75em;
 }
-body .box .form .input-box input:valid ~ i, body .box .form .input-box input:focus ~ i {
+main .box form .input-box input:valid ~ i, main .box form .input-box input:focus ~ i {
   height: 44px;
 }
-body .box .form .input-box span {
+main .box form .input-box span {
   position: absolute;
   left: 0;
   padding: 20px 0 10px;
@@ -139,7 +145,7 @@ body .box .form .input-box span {
   letter-spacing: 0.05em;
   transition: 0.5s;
 }
-body .box .form .input-box i {
+main .box form .input-box i {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -151,19 +157,19 @@ body .box .form .input-box i {
   pointer-events: none;
   z-index: 9;
 }
-body .box .form .links {
+main .box form .links {
   display: flex;
   justify-content: space-between;
 }
-body .box .form .links a {
+main .box form .links a {
   margin: 10px 0;
   font-size: 0.75em;
   color: #8f8f8f;
 }
-body .box .form .links a:hover, body .box .form .links a:nth-child(2) {
+main .box form .links a:hover, main .box form .links a:nth-child(2) {
   color: #45f3ff;
 }
-body .box .form input[type=submit] {
+main .box form input[type=submit] {
   border: none;
   outline: none;
   background-color: #45f3ff;
@@ -174,18 +180,18 @@ body .box .form input[type=submit] {
   font-weight: 600;
   cursor: pointer;
 }
-body .box .form input[type=submit]:active {
+main .box form input[type=submit]:active {
   opacity: 0.8;
 }
-body span {
+main span {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: #c0c0c0;
   margin-top: 6px;
   letter-spacing: 0.04em;
 }
-body span a {
+main span a {
   color: #919191;
 }
-body span a:hover {
+main span a:hover {
   text-shadow: 2px 2px 8px #ce5937;
 }/*# sourceMappingURL=main.css.map */
