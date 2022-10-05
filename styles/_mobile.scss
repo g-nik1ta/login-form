@@ -1,0 +1,25 @@
+@media (max-width: 600px) {
+    .box {
+        width: 300px !important;
+        height: 400px !important;
+
+        .form {
+            padding: 40px $formPaddingLeft - 10 !important;
+
+            .input-box {
+                min-width: auto !important;
+            }
+        }
+    }
+
+    span {
+        max-width: 260px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 380px) {
+    .box {
+        width: 280px !important;
+    }
+}
